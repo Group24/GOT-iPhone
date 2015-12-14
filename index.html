@@ -1,19 +1,208 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
+<head>
+<meta charset="UTF-8">
+<title>got</title>
+<link href="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
 
-  <head>
-  
-  </head>
-  
-  <body>
-  
-    <h1>
-      
-      James is a koskesh.
-      
-    </h1>
-  
-  </body>
+<style>
+/*this is main background style */
+.main_bg{
+	background: url(main_bg.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-size:100%;
+}
+/*header image style*/
+.header_image{
+    margin-left:auto;
+    margin-right:auto;
+    display: block
+}
 
+.ui-button {
+    /*min-height: 100% !important;*/
+    background: transparent !important;
+}
+
+
+
+video
+{
+	width: auto;
+	height: auto;
+	max-height: auto;
+    animation-play-state:paused;
+}
+
+
+
+.videoContainer
+{
+	position:absolute;
+	height:auto;
+	width:auto;
+	overflow: hidden;
+    margin-top:
+}
+
+.videoContainer video
+{
+	min-width: auto;
+	min-height: auto;
+}
+
+iframe {
+	border: 0px;
+/*border-top-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-right-width: 0px;*/
+}
+
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
+
+
+</style>
+</head>
+
+<body>
+<div data-role="page" id="intro" data-dialog="true">
+  <div data-role="header" >
+  <div class="header_image">
+  <img  src="logo.png" alt="Logo"/>
+  </div>
+
+  </div>
+  <div id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+  	<iframe src="http://player.vimeo.com/video/41135183?portrait=0" seamless></iframe>
+  </div>
+	  
+<div data-role="footer">
+	<h2>	<a href="#titleSequence" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power">SKIP</a></h2>
+
+    
+</div>
+</div>
+
+
+<!--Intro page-->
+<div data-role="page"  id="titleSequence" class="main_bg" >
+  <div data-role="header" >
+  <div class="header_image">
+  <img  src="logo.png" alt="Logo"/>
+  </div>
+  </div>
+
+  <div class="ui-content">
+  <a href="#home" data-role="button"  class="ui-button">Link button</a>
+  </div>
+	<div data-role="footer">
+	<h4>Footer</h4>
+  </div>
+</div>
+<!--Home page-->
+<div data-role="page" id="home" data-dialog="true" >
+  <div data-role="header">
+	<h1>This is home</h1>
+  </div>
+  <div class="ui-content">Content</div>
+  <div data-role="footer">
+	<h4>Footer</h4>
+  </div>
+</div>
+
+<!--Role of quiz-->
+<div data-role="page" id="ruleOfQuiz" class="main_bg">
+  <div data-role="header">
+	<h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+	<h4>Footer</h4>
+  </div>
+</div>
+<!--map and level selection page-->
+<div data-role="page" id="mapLevelSelect">
+  <div data-role="header">
+	<h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+	<h4>Footer</h4>
+  </div>
+</div>
+
+<!--Question page-->
+<div data-role="page" id="question">
+  <div data-role="header">
+	<h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+	<h4>Footer</h4>
+  </div>
+</div>
+
+
+
+
+<script>
+
+// popup examples
+$( document ).on( "pagecreate", function() {
+    // The window width and height are decreased by 30 to take the tolerance of 15 pixels at each side into account
+    function scale( width, height, padding, border ) {
+        var scrWidth = $( window ).width() - 30,
+            scrHeight = $( window ).height() - 30,
+            ifrPadding = 2 * padding,
+            ifrBorder = 2 * border,
+            ifrWidth = width + ifrPadding + ifrBorder,
+            ifrHeight = height + ifrPadding + ifrBorder,
+            h, w;
+        if ( ifrWidth < scrWidth && ifrHeight < scrHeight ) {
+            w = ifrWidth;
+            h = ifrHeight;
+        } else if ( ( ifrWidth / scrWidth ) > ( ifrHeight / scrHeight ) ) {
+            w = scrWidth;
+            h = ( scrWidth / ifrWidth ) * ifrHeight;
+        } else {
+            h = scrHeight;
+            w = ( scrHeight / ifrHeight ) * ifrWidth;
+        }
+        return {
+            'width': w - ( ifrPadding + ifrBorder ),
+            'height': h - ( ifrPadding + ifrBorder )
+        };
+    };
+    $( ".ui-popup iframe" )
+        .attr( "width", 0 )
+        .attr( "height", "auto" );
+    $( "#popupVideo" ).on({
+        popupbeforeposition: function() {
+            // call our custom function scale() to get the width and height
+            var size = scale( 497, 298, 15, 1 ),
+                w = size.width,
+                h = size.height;
+            $( "#popupVideo iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+        },
+        popupafterclose: function() {
+            $( "#popupVideo iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );
+        }
+    });
+});
+
+</script>
+
+
+</body>
 </html>
