@@ -89,7 +89,7 @@
       </div>
 
       <!-- panel -->
-       <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="b">
+       <div data-role="panel" id="left-panel" data-display="push" data-position="left" data-theme="b">
           <ul data-role="listview" data-inset="true">
             <li>
                 <a href="#">
@@ -254,8 +254,8 @@
 
   <script>
    // Javascript for menu
-    $( document ).on( "pagecreate", "#demo-page", function() {
-    $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+    $( document ).on( "pagecreate", "#home", function() {
+    $( document ).on( "swipeleft swiperight", "#home", function( e ) {
         // We check if there is no open panel on the page because otherwise
         // a swipe to close the left panel would also open the right panel (and v.v.).
         // We do this by checking the data that the framework stores on the page element (panel: open).
