@@ -1,0 +1,24 @@
+@font-face {
+    font-family: GameOfThronesFont;
+    src: url(../Fonts/Game_of_Thrones.ttf);
+}
+
+@font-face {
+    font-family: GothamLightFont;
+    src: url(../Fonts/GOTHAM-LIGHT.TTF);
+}
+
+@font-face {
+    font-family: GothamBlackFont;
+    src: url(../Fonts/GOTHAM-BLACK.TTF);
+}
+
+@font-face {
+    font-family: GothamExtraLightFont;
+    src: url(../Fonts/GOTHAM-XLIGHT.TTF);
+}
+
+@font-face {
+    font-family: GothamMediumFont;
+    src: url(../Fonts/GOTHAM-MEDIUM.TTF);
+}
