@@ -83,12 +83,8 @@
       <div class="ui-content">
 
       </div>
-      
-      <div data-role="footer" data-position="fixed">
-    	 <h4>Footer</h4>
-      </div>
 
-      <!-- panel -->
+            <!-- panel -->
        <div data-role="panel" id="left-panel" data-display="push" data-position="left" data-theme="b">
           <ul data-role="listview" data-inset="true">
             <li>
@@ -131,6 +127,10 @@
         <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right">Close</a>
     </div>
     <!-- /panel -->
+      
+      <div data-role="footer" data-position="fixed">
+    	 <h4>Footer</h4>
+      </div>
 
     </div>
 
@@ -254,8 +254,8 @@
 
   <script>
    // Javascript for menu
-    $( document ).on( "pagecreate", "#home", function() {
-    $( document ).on( "swipeleft swiperight", "#home", function( e ) {
+    $( document ).on( "pagecreate", "#demo-page", function() {
+    $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
         // We check if there is no open panel on the page because otherwise
         // a swipe to close the left panel would also open the right panel (and v.v.).
         // We do this by checking the data that the framework stores on the page element (panel: open).
