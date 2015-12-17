@@ -59,6 +59,7 @@
 
       <div class="ui-content">
         <a href="#home" data-role="button"  class="ui-button">Link button</a>
+
       </div>
     	
       <div data-role="footer" data-position="fixed">
@@ -71,39 +72,65 @@
     <div data-role="page" id="home" data-dialog="true" class="main_bg" >
       
       <div data-role="header">
+        <a href="#left-panel" data-icon="carat-l" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-right ui-icon-navigation">
+          Houses
+        </a>
         <div class="header_image">
         <img  src="https://raw.githubusercontent.com/Group24/GOT-iPhone/gh-pages/Assets/logo.png" alt="Logo"/>
         </div>
       </div>
-
-
       
       <div class="ui-content">
-
-      <div class="wrap">
-        <nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" role="navigation">
-          <ul class="menu">
-            <li class="menu-item">
-              <a href="#">Home</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">About</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">Blog</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
 
       </div>
       
       <div data-role="footer" data-position="fixed">
     	 <h4>Footer</h4>
       </div>
+
+      <!-- panel -->
+       <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="b">
+          <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="#">
+                  <img src="stark.png">
+                  <h2>Home</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                  <img src="tully.png">
+                  <h2>Treasure Hunt</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                  <img src="lannister.png">
+                  <h2>Favourite List</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                  <img src="lannister.png">
+                  <h2>Newsletter</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                  <img src="lannister.png">
+                  <h2>Attraction</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                  <img src="lannister.png">
+                  <h2>Trophy Case</h2>
+                </a>
+            </li>
+          </ul>
+        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right">Close</a>
+    </div>
+    <!-- /panel -->
 
     </div>
 
