@@ -72,9 +72,9 @@
     <div data-role="page" id="home" data-dialog="true" class="main_bg" >
       
       <div data-role="header">
-        <a href="#left-panel" data-icon="carat-l" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-right ui-icon-navigation">
-          Houses
-        </a>
+        <a href="#left-panel" data-icon="carat-l" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-left ui-icon-navigation">
+          Menu
+        </a>
         <div class="header_image">
         <img  src="https://raw.githubusercontent.com/Group24/GOT-iPhone/gh-pages/Assets/logo.png" alt="Logo"/>
         </div>
@@ -251,4 +251,24 @@
     </div> 
 
   </body>
+
+  <script>
+   // Javascript for menu
+    $( document ).on( "pagecreate", "#demo-page", function() {
+    $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft" ) {
+                $( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+        }
+    });
+});
+
+  </script>
+
 </html>
