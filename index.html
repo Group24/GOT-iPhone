@@ -249,6 +249,86 @@
 
     </div> 
 
+
+
+
+
+
+
+      <!--add to favourites page1-->
+
+        <div data-role="page" id="item1">
+        <div data-role="header">
+        <h1>item1</h1>
+        </div>
+        <div role="main" class="ui-content">
+        <h2>item1</h2>
+        <p>some text about item 1</p>
+        <a href="#item1" class="ui-btn ui-btn-a ui-btn-inline">Item1</a>
+        <a href="#favourites" class="ui-btn ui-btn-a ui-btn-inline">Favourites</a>
+        <fieldset data-role="controlgroup"  data-type="horizontal">
+         <input type="checkbox"  id="favourite1">
+        <label for="favourite1" >★ Add to Favourties</label>
+        </fieldset>
+        </div>
+        <div data-role="footer">
+        <h1>footer</h1>
+        </div>
+        </div>
+
+<!--add page2 to favourites -->
+
+        <div data-role="page" id="item2">
+        <div data-role="header">
+        <h1>item2</h1>
+        </div>
+        <div role="main" class="ui-content">
+        <h2>item2</h2>
+        <p>some text about item 2</p>
+        <a href="#item2" class="ui-btn ui-btn-a ui-btn-inline">Item2</a>
+        <a href="#favourites" class="ui-btn ui-btn-a ui-btn-inline">Favourites</a>
+        <fieldset data-role="controlgroup"  data-type="horizontal">
+        <input type="checkbox"  id="favourite2">
+        <label for="favourite2" >★ Add to Favourties</label>
+        </fieldset>
+        </div>
+        <div data-role="footer">
+        <h1>footer</h1>
+        </div>
+        </div>
+
+<!--favourites page-->
+<div data-role="page" id="favourites" >
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  
+ <div data-role="main" class="ui-content">
+<h2>Favourites</h2>
+
+<div id="favourite-content"><p>My Favourties</p>
+<a href="#item1" class="ui-btn ui-btn-a ui-btn-inline">Item1</a>
+<a href="#item2" class="ui-btn ui-btn-a ui-btn-inline">Item2</a>
+</div>
+</div>  
+ 
+  <div data-role="footer" data-position="fixed">
+    <h4>Footer</h4>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 
   <script>
@@ -266,6 +346,26 @@
             }
         }
     });
+});
+
+
+
+
+//FOR FAVOURITES LIES
+$(document).on('pagecontainerbeforehide', 'body',function(event, ui){
+    if (ui.nextPage.attr('id') == "favourites" ){
+        
+        if ( $("#favourite1").is(":checked")){
+            $("#favourite-content").html("item1");
+        }
+        else {
+            $("#favourite-content").html( " " );
+        }
+        if( $( "#favourite2").is(":checked")) {
+            $( "#favourite-content" ).append("item2");
+        }
+                
+    }
 });
 
   </script>
