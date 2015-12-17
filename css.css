@@ -1,0 +1,73 @@
+/*this is main background style */
+.main_bg{
+	background: url(main_bg.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-width: 100%;
+ 	min-height: 100%;
+	
+}
+/*header image style*/
+.header_image{
+    margin-left:auto;
+    margin-right:auto;
+    display: block
+}
+
+.ui-button {
+    /*min-height: 100% !important;*/
+    background: transparent !important;
+}
+
+/*transparent listview*/
+/*.ui-listview {*/
+.ui-listview, .ui-li{
+    /*min-height: 100% !important;*/
+    background: transparent !important;
+}
+
+.ui-li-heading{
+	color: #9D9473;
+}
+
+.ui-li-desc{
+	color: #D1D1D1;
+}
+
+video
+{
+	width: auto;
+	height: auto;
+	max-height: auto;
+    animation-play-state:paused;
+}
+
+
+
+.videoContainer
+{
+	position:absolute;
+	height:auto;
+	width:auto;
+	overflow: hidden;
+    margin-top:
+}
+
+.videoContainer video
+{
+	min-width: auto;
+	min-height: auto;
+}
+
+iframe {
+	border: 0px;
+/*border-top-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-right-width: 0px;*/
+}
+
+[data-role=page]{height: 100% !important; position:relative !important;}
+/*[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}*/
