@@ -30,7 +30,7 @@
 
   <body>
 
-    <div data-role="page" id="intro" data-dialog="true">
+    <div data-role="page" id="intro" data-theme="b">
       
       <div data-role="header">
         <div class="header_image">
@@ -38,8 +38,8 @@
         </div>
       </div>
 
-      <div data-role="ui-content" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
-      	<iframe src="http://player.vimeo.com/video/41135183?portrait=0" seamless></iframe>
+      <div data-role="ui-content" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15">
+      	<iframe src="http://player.vimeo.com/video/41135183?portrait=0" seamless="" style="position:absolute; border:none"></iframe>
       </div>
     	  
       <div data-role="footer" data-position="fixed">
@@ -49,7 +49,7 @@
     </div>
 
     <!--  ******************************  COPY PASTE TO ADD ANOTHER PAGE  ******************************  -->
-    <div data-role="page"  id="titleSequence" class="main_bg" >
+    <div data-role="page"  id="titleSequence" class="main_bg" data-theme="b">
       
       <div data-role="header" >
         <div class="header_image">
@@ -69,7 +69,7 @@
     </div>
     
     <!--  ******************************  HOME PAGE  ******************************  -->
-    <div data-role="page" id="home" data-dialog="true" class="main_bg" >
+    <div data-role="page" id="home" class="main_bg" data-theme="b">
       
       <div data-role="header">
         <a href="#left-panel" data-icon="carat-l" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-left ui-icon-navigation">
@@ -134,7 +134,7 @@
     </div>
 
     <!--  ****************************** QUIZ RULES PAGE  ******************************  -->
-    <div data-role="page" id="ruleOfQuiz" class="main_bg">
+    <div data-role="page" id="ruleOfQuiz" class="main_bg" data-theme="b">
       
       <div data-role="header">
         <div class="header_image">
@@ -151,7 +151,7 @@
     </div>
     
     <!--  ******************************  MAP PAGE  ******************************  -->
-    <div data-role="page" id="mapLevelSelect" class="main_bg" >
+    <div data-role="page" id="mapLevelSelect" class="main_bg" data-theme="b">
       
       <div data-role="header">
         <div class="header_image">
@@ -168,7 +168,7 @@
     </div>
 
     <!--  ******************************  QUESTION PAGE  ******************************  -->
-    <div data-role="page" id="question" class="main_bg" >
+    <div data-role="page" id="question" class="main_bg" data-theme="b">
       
       <div data-role="header">
         <div class="header_image">
@@ -185,7 +185,7 @@
     </div>
 
     <!--  ******************************  NEWSLETTER PAGE  ******************************  -->
-    <div data-role="page" id="newsletter" class="main_bg" >
+    <div data-role="page" id="newsletter" class="main_bg" data-theme="b">
     	
       <div data-role="header">
         <div class="header_image">
@@ -241,7 +241,7 @@
         </ul>
       </div>
       
-      <div data-role="footer" data-position="fixed">
+      <div data-role="footer" data-position="fixed" data-theme="b">
     	<h2>	
         <a href="#titleSequence" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power"></a> 
       </h2>   
@@ -257,7 +257,7 @@
 
       <!--add to favourites page1-->
 
-        <div data-role="page" id="item1">
+        <div data-role="page" id="item1" data-theme="b">
         <div data-role="header">
         <h1>item1</h1>
         </div>
@@ -278,7 +278,7 @@
 
 <!--add page2 to favourites -->
 
-        <div data-role="page" id="item2">
+        <div data-role="page" id="item2" data-theme="b">
         <div data-role="header">
         <h1>item2</h1>
         </div>
@@ -298,21 +298,21 @@
         </div>
 
 <!--favourites page-->
-<div data-role="page" id="favourites" >
+<div data-role="page" id="favourites" data-theme="b">
   <div data-role="header">
     <h1>Header</h1>
   </div>
   
- <div data-role="main" class="ui-content">
+ <div data-role="main" class="ui-content" data-theme="b">
 <h2>Favourites</h2>
 
-<div id="favourite-content"><p>My Favourties</p>
+<div id="favourite-content"><p>My Favourties</p data-theme="b">
 <a href="#item1" class="ui-btn ui-btn-a ui-btn-inline">Item1</a>
 <a href="#item2" class="ui-btn ui-btn-a ui-btn-inline">Item2</a>
 </div>
 </div>  
  
-  <div data-role="footer" data-position="fixed">
+  <div data-role="footer" data-position="fixed" data-theme="b">
     <h4>Footer</h4>
     
   </div>
