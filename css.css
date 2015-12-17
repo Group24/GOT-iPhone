@@ -1,6 +1,6 @@
 /*this is main background style */
 .main_bg{
-	background: url(/Assets/main_bg.png) no-repeat center center fixed;
+	background: url(https://raw.githubusercontent.com/Group24/GOT-iPhone/gh-pages/Assets/main_bg.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
